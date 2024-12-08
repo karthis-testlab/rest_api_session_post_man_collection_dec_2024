@@ -1,0 +1,140 @@
+{
+	"info": {
+		"_postman_id": "859a48aa-d25e-4623-8455-b4c0e24b8d09",
+		"name": "class-room-assessment-1",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28447185"
+	},
+	"item": [
+		{
+			"name": "create-a-new-record-for-change-request",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Verify Status should be 201 code\", function () {\r",
+							"    pm.response.to.have.status(201);\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "vW0eDfd+A0V-",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"short_description\": \"Create incident via postman\",\r\n    \"description\": \"My first incident\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://dev262949.service-now.com/api/now/table/:table_name",
+					"protocol": "https",
+					"host": [
+						"dev262949",
+						"service-now",
+						"com"
+					],
+					"path": [
+						"api",
+						"now",
+						"table",
+						":table_name"
+					],
+					"variable": [
+						{
+							"key": "table_name",
+							"value": "change_request"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Reterive_a_record_from_change_request_table",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "vW0eDfd+A0V-",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://dev262949.service-now.com/api/now/table/:tableName/:sysId",
+					"protocol": "https",
+					"host": [
+						"dev262949",
+						"service-now",
+						"com"
+					],
+					"path": [
+						"api",
+						"now",
+						"table",
+						":tableName",
+						":sysId"
+					],
+					"variable": [
+						{
+							"key": "tableName",
+							"value": "change_request"
+						},
+						{
+							"key": "sysId",
+							"value": "43f2561e831ed210695bc7b6feaad388"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
