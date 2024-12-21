@@ -28,12 +28,12 @@
 					"basic": [
 						{
 							"key": "password",
-							"value": "vW0eDfd+A0V-",
+							"value": "{{password}}",
 							"type": "string"
 						},
 						{
 							"key": "username",
-							"value": "admin",
+							"value": "{{username}}",
 							"type": "string"
 						}
 					]
@@ -50,23 +50,17 @@
 					}
 				},
 				"url": {
-					"raw": "https://dev262949.service-now.com/api/now/table/:table_name",
-					"protocol": "https",
+					"raw": "{{host-url}}{{base-path}}/:table_name",
 					"host": [
-						"dev262949",
-						"service-now",
-						"com"
+						"{{host-url}}{{base-path}}"
 					],
 					"path": [
-						"api",
-						"now",
-						"table",
 						":table_name"
 					],
 					"variable": [
 						{
 							"key": "table_name",
-							"value": "change_request"
+							"value": "{{tableName}}"
 						}
 					]
 				}
@@ -95,12 +89,12 @@
 					"basic": [
 						{
 							"key": "password",
-							"value": "vW0eDfd+A0V-",
+							"value": "{{password}}",
 							"type": "string"
 						},
 						{
 							"key": "username",
-							"value": "admin",
+							"value": "{{username}}",
 							"type": "string"
 						}
 					]
@@ -108,33 +102,53 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "https://dev262949.service-now.com/api/now/table/:tableName/:sysId",
-					"protocol": "https",
+					"raw": "{{host-url}}{{base-path}}/:table_name/:sysId",
 					"host": [
-						"dev262949",
-						"service-now",
-						"com"
+						"{{host-url}}{{base-path}}"
 					],
 					"path": [
-						"api",
-						"now",
-						"table",
-						":tableName",
+						":table_name",
 						":sysId"
 					],
 					"variable": [
 						{
-							"key": "tableName",
-							"value": "change_request"
+							"key": "table_name",
+							"value": "{{tableName}}"
 						},
 						{
 							"key": "sysId",
-							"value": "43f2561e831ed210695bc7b6feaad388"
+							"value": "{{sysId}}"
 						}
 					]
 				}
 			},
 			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "username",
+			"value": "admin"
+		},
+		{
+			"key": "password",
+			"value": "vW0eDfd+A0V-"
+		},
+		{
+			"key": "host-url",
+			"value": "https://dev262949.service-now.com"
+		},
+		{
+			"key": "base-path",
+			"value": "/api/now/table"
+		},
+		{
+			"key": "tableName",
+			"value": "change_request"
+		},
+		{
+			"key": "sysId",
+			"value": "43f2561e831ed210695bc7b6feaad388"
 		}
 	]
 }

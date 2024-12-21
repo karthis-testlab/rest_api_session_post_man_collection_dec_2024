@@ -1,7 +1,7 @@
 {
 	"info": {
-		"_postman_id": "438162e1-a280-41c2-9a45-4fb1f0416858",
-		"name": "class-room-assessment-2",
+		"_postman_id": "999cabcb-a862-44c8-9d72-a7fc23bdb63d",
+		"name": "class-room-assessment-3",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "28447185"
 	},
@@ -15,7 +15,10 @@
 						"exec": [
 							"pm.test(\"Status code is 201\", function () {\r",
 							"    pm.response.to.have.status(201);\r",
-							"});"
+							"});\r",
+							"\r",
+							"var jsonResponse = pm.response.json();\r",
+							"pm.collectionVariables.set(\"id\", jsonResponse.result.sys_id);"
 						],
 						"type": "text/javascript",
 						"packages": {}
@@ -77,6 +80,10 @@
 						"exec": [
 							"pm.test(\"Status code is 200\", function () {\r",
 							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Validate fetching correct sys id\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.result.sys_id).to.eql(pm.collectionVariables.get(\"id\"));\r",
 							"});"
 						],
 						"type": "text/javascript",
@@ -119,7 +126,7 @@
 						},
 						{
 							"key": "sys_id",
-							"value": ""
+							"value": "{{id}}"
 						}
 					]
 				}
@@ -186,7 +193,7 @@
 						},
 						{
 							"key": "sys_id",
-							"value": "20ef02de839ad210695bc7b6feaad387"
+							"value": "{{id}}"
 						}
 					]
 				}
@@ -244,7 +251,7 @@
 						},
 						{
 							"key": "sys_id",
-							"value": "20ef02de839ad210695bc7b6feaad387"
+							"value": "{{id}}"
 						}
 					]
 				}
@@ -302,12 +309,18 @@
 						},
 						{
 							"key": "sys_id",
-							"value": "20ef02de839ad210695bc7b6feaad387"
+							"value": "{{id}}"
 						}
 					]
 				}
 			},
 			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "id",
+			"value": ""
 		}
 	]
 }

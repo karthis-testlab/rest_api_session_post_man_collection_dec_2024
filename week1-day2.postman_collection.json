@@ -14,12 +14,12 @@
 					"basic": [
 						{
 							"key": "password",
-							"value": "vW0eDfd+A0V-",
+							"value": "{{password}}",
 							"type": "string"
 						},
 						{
 							"key": "username",
-							"value": "admin",
+							"value": "{{userName}}",
 							"type": "string"
 						}
 					]
@@ -27,17 +27,12 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "https://dev262949.service-now.com/api/now/table/:tableName",
-					"protocol": "https",
+					"raw": "{{protocol}}://{{hostName}}{{basePath}}/:tableName",
+					"protocol": "{{protocol}}",
 					"host": [
-						"dev262949",
-						"service-now",
-						"com"
+						"{{hostName}}{{basePath}}"
 					],
 					"path": [
-						"api",
-						"now",
-						"table",
 						":tableName"
 					],
 					"variable": [
@@ -58,12 +53,12 @@
 					"basic": [
 						{
 							"key": "password",
-							"value": "vW0eDfd+A0V-",
+							"value": "{{password}}",
 							"type": "string"
 						},
 						{
 							"key": "username",
-							"value": "admin",
+							"value": "{{userName}}",
 							"type": "string"
 						}
 					]
@@ -71,17 +66,12 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "https://dev262949.service-now.com/api/now/table/:tableName/:sysId",
-					"protocol": "https",
+					"raw": "{{protocol}}://{{hostName}}{{basePath}}/:tableName/:sysId",
+					"protocol": "{{protocol}}",
 					"host": [
-						"dev262949",
-						"service-now",
-						"com"
+						"{{hostName}}{{basePath}}"
 					],
 					"path": [
-						"api",
-						"now",
-						"table",
 						":tableName",
 						":sysId"
 					],
@@ -106,13 +96,13 @@
 					"type": "basic",
 					"basic": [
 						{
-							"key": "password",
-							"value": "vW0eDfd+A0V-",
+							"key": "username",
+							"value": "",
 							"type": "string"
 						},
 						{
-							"key": "username",
-							"value": "admin",
+							"key": "password",
+							"value": "vW0eDfd+A0V-",
 							"type": "string"
 						}
 					]
@@ -120,17 +110,12 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "https://dev262949.service-now.com/api/now/table/:tableName?sysparm_limit=10&sysparm_fields=sys_id,number",
-					"protocol": "https",
+					"raw": "{{protocol}}://{{hostName}}{{basePath}}/:tableName?sysparm_limit=10&sysparm_fields=sys_id,number",
+					"protocol": "{{protocol}}",
 					"host": [
-						"dev262949",
-						"service-now",
-						"com"
+						"{{hostName}}{{basePath}}"
 					],
 					"path": [
-						"api",
-						"now",
-						"table",
 						":tableName"
 					],
 					"query": [
@@ -200,17 +185,12 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "https://dev262949.service-now.com/api/now/table/:tableName?sysparm_limit=10&sysparm_fields=sys_id,number",
-					"protocol": "https",
+					"raw": "{{protocol}}://{{hostName}}{{basePath}}/:tableName?sysparm_limit=10&sysparm_fields=sys_id,number",
+					"protocol": "{{protocol}}",
 					"host": [
-						"dev262949",
-						"service-now",
-						"com"
+						"{{hostName}}{{basePath}}"
 					],
 					"path": [
-						"api",
-						"now",
-						"table",
 						":tableName"
 					],
 					"query": [
@@ -259,12 +239,12 @@
 					"basic": [
 						{
 							"key": "password",
-							"value": "vW0eDfd+A0V-",
+							"value": "{{password}}",
 							"type": "string"
 						},
 						{
 							"key": "username",
-							"value": "admin",
+							"value": "{{userName}}",
 							"type": "string"
 						}
 					]
@@ -272,17 +252,12 @@
 				"method": "POST",
 				"header": [],
 				"url": {
-					"raw": "https://dev262949.service-now.com/api/now/table/:tableName",
-					"protocol": "https",
+					"raw": "{{protocol}}://{{hostName}}{{basePath}}/:tableName",
+					"protocol": "{{protocol}}",
 					"host": [
-						"dev262949",
-						"service-now",
-						"com"
+						"{{hostName}}{{basePath}}"
 					],
 					"path": [
-						"api",
-						"now",
-						"table",
 						":tableName"
 					],
 					"variable": [
@@ -321,12 +296,12 @@
 					"basic": [
 						{
 							"key": "password",
-							"value": "vW0eDfd+A0V-",
+							"value": "{{password}}",
 							"type": "string"
 						},
 						{
 							"key": "username",
-							"value": "admin",
+							"value": "{{userName}}",
 							"type": "string"
 						}
 					]
@@ -343,17 +318,12 @@
 					}
 				},
 				"url": {
-					"raw": "https://dev262949.service-now.com/api/now/table/:tableName",
-					"protocol": "https",
+					"raw": "{{protocol}}://{{hostName}}{{basePath}}/:tableName",
+					"protocol": "{{protocol}}",
 					"host": [
-						"dev262949",
-						"service-now",
-						"com"
+						"{{hostName}}{{basePath}}"
 					],
 					"path": [
-						"api",
-						"now",
-						"table",
 						":tableName"
 					],
 					"variable": [
@@ -388,12 +358,12 @@
 					"basic": [
 						{
 							"key": "password",
-							"value": "vW0eDfd+A0V-",
+							"value": "{{password}}",
 							"type": "string"
 						},
 						{
 							"key": "username",
-							"value": "admin",
+							"value": "{{userName}}",
 							"type": "string"
 						}
 					]
@@ -410,17 +380,12 @@
 					}
 				},
 				"url": {
-					"raw": "https://dev262949.service-now.com/api/now/table/:table/:sys_id",
-					"protocol": "https",
+					"raw": "{{protocol}}://{{hostName}}{{basePath}}/:table/:sys_id",
+					"protocol": "{{protocol}}",
 					"host": [
-						"dev262949",
-						"service-now",
-						"com"
+						"{{hostName}}{{basePath}}"
 					],
 					"path": [
-						"api",
-						"now",
-						"table",
 						":table",
 						":sys_id"
 					],
@@ -460,12 +425,12 @@
 					"basic": [
 						{
 							"key": "password",
-							"value": "vW0eDfd+A0V-",
+							"value": "{{password}}",
 							"type": "string"
 						},
 						{
 							"key": "username",
-							"value": "admin",
+							"value": "{{userName}}",
 							"type": "string"
 						}
 					]
@@ -482,17 +447,12 @@
 					}
 				},
 				"url": {
-					"raw": "https://dev262949.service-now.com/api/now/table/:table/:sys_id",
-					"protocol": "https",
+					"raw": "{{protocol}}://{{hostName}}{{basePath}}/:table/:sys_id",
+					"protocol": "{{protocol}}",
 					"host": [
-						"dev262949",
-						"service-now",
-						"com"
+						"{{hostName}}{{basePath}}"
 					],
 					"path": [
-						"api",
-						"now",
-						"table",
 						":table",
 						":sys_id"
 					],
@@ -532,12 +492,12 @@
 					"basic": [
 						{
 							"key": "password",
-							"value": "vW0eDfd+A0V-",
+							"value": "{{password}}",
 							"type": "string"
 						},
 						{
 							"key": "username",
-							"value": "admin",
+							"value": "{{userName}}",
 							"type": "string"
 						}
 					]
@@ -545,17 +505,12 @@
 				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": "https://dev262949.service-now.com/api/now/table/:tableName/:sys_id",
-					"protocol": "https",
+					"raw": "{{protocol}}://{{hostName}}{{basePath}}/:tableName/:sys_id",
+					"protocol": "{{protocol}}",
 					"host": [
-						"dev262949",
-						"service-now",
-						"com"
+						"{{hostName}}{{basePath}}"
 					],
 					"path": [
-						"api",
-						"now",
-						"table",
 						":tableName",
 						":sys_id"
 					],
@@ -572,6 +527,38 @@
 				}
 			},
 			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "userName",
+			"value": "admin"
+		},
+		{
+			"key": "password",
+			"value": ""
 		}
 	]
 }

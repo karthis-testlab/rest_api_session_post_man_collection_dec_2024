@@ -1,0 +1,219 @@
+{
+	"info": {
+		"_postman_id": "79a0b8ec-bdea-42ea-8d87-c6743ff90a0a",
+		"name": "week2-day1",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28447185"
+	},
+	"item": [
+		{
+			"name": "Reterive_all_values_with_path_variable",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var num = 10;\r",
+							"console.log(num);"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "{{password}}",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "{{username}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{protocol}}://{{hostName}}{{basePath}}/:tableName",
+					"protocol": "{{protocol}}",
+					"host": [
+						"{{hostName}}{{basePath}}"
+					],
+					"path": [
+						":tableName"
+					],
+					"variable": [
+						{
+							"key": "tableName",
+							"value": "incident"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create_a_new_record_without_request_body",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 201\", function () {\r",
+							"    pm.response.to.have.status(201);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Status code name has string\", function () {\r",
+							"    pm.response.to.have.status(\"Created\");\r",
+							"});\r",
+							"\r",
+							"var jsonResponse = pm.response.json();\r",
+							"console.log(jsonResponse.result.sys_id);\r",
+							"pm.collectionVariables.set(\"sysId\", jsonResponse.result.sys_id);"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "{{password}}",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "{{username}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{protocol}}://{{hostName}}{{basePath}}/:tableName",
+					"protocol": "{{protocol}}",
+					"host": [
+						"{{hostName}}{{basePath}}"
+					],
+					"path": [
+						":tableName"
+					],
+					"variable": [
+						{
+							"key": "tableName",
+							"value": "incident"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Retrieve-a-single-create-record",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "{{password}}",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "{{username}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{protocol}}://{{hostName}}{{basePath}}/:tableName/:sys_id",
+					"protocol": "{{protocol}}",
+					"host": [
+						"{{hostName}}{{basePath}}"
+					],
+					"path": [
+						":tableName",
+						":sys_id"
+					],
+					"variable": [
+						{
+							"key": "tableName",
+							"value": "incident"
+						},
+						{
+							"key": "sys_id",
+							"value": "{{sysId}}"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "username",
+			"value": "admin",
+			"type": "string"
+		},
+		{
+			"key": "password",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "sysId",
+			"value": ""
+		}
+	]
+}

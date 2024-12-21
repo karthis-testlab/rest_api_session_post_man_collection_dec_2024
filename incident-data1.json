@@ -1,0 +1,15 @@
+[
+	{
+		"description": "Creating one record using postman - JSON1",
+		"shortDescription": "Smoke Test - JSONData1"
+	},
+	{
+		"description": "Creating one record using postman - JSON2",
+		"shortDescription": "Smoke Test - JSONData2"
+	},
+	{
+		"description": "Creating one record using postman - JSON3",
+		"shortDescription": "Smoke Test - JSONData3"
+	}
+
+]
