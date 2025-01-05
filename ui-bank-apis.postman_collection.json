@@ -1,0 +1,118 @@
+{
+	"info": {
+		"_postman_id": "a136379c-71cb-4ffb-ba6c-bc7dd65b48bc",
+		"name": "ui-bank-apis",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28447185"
+	},
+	"item": [
+		{
+			"name": "create-auth-token",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"username\": \"FebApiuser\",\r\n  \"password\": \"Eagle@123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://uibank-api.azurewebsites.net/api/users/login",
+					"protocol": "https",
+					"host": [
+						"uibank-api",
+						"azurewebsites",
+						"net"
+					],
+					"path": [
+						"api",
+						"users",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get-all-accounts-for-userid",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "CVXUUWoILGGMGcuAiTeE7EhpO42BsEvH3ZqLwl3Ql2GK9CQFdsWzCImYwNsCYee6",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://uibank-api.azurewebsites.net/api/accounts?filter[where][userId]=64290731ba9f8a0047adacfc",
+					"protocol": "https",
+					"host": [
+						"uibank-api",
+						"azurewebsites",
+						"net"
+					],
+					"path": [
+						"api",
+						"accounts"
+					],
+					"query": [
+						{
+							"key": "filter[where][userId]",
+							"value": "64290731ba9f8a0047adacfc"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create-a-new-account",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "CVXUUWoILGGMGcuAiTeE7EhpO42BsEvH3ZqLwl3Ql2GK9CQFdsWzCImYwNsCYee6",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"friendlyName\": \"NICKGT1\",\r\n  \"type\": \"savings\",\r\n  \"userId\": \"64290731ba9f8a0047adacfc\",\r\n  \"balance\": 100,\r\n  \"accountNumber\": 424579767\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://uibank-api.azurewebsites.net/api/accounts",
+					"protocol": "https",
+					"host": [
+						"uibank-api",
+						"azurewebsites",
+						"net"
+					],
+					"path": [
+						"api",
+						"accounts"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
