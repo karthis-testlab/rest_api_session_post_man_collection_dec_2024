@@ -39,12 +39,10 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "https://dev262949.service-now.com/api/now/table/incident",
-					"protocol": "https",
+					"raw": "{{protocol}}://{{hostName}}/api/now/table/incident",
+					"protocol": "{{protocol}}",
 					"host": [
-						"dev262949",
-						"service-now",
-						"com"
+						"{{hostName}}"
 					],
 					"path": [
 						"api",
